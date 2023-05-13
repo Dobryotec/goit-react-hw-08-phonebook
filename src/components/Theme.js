@@ -63,7 +63,11 @@ export const Theme = () => {
   });
 
   return (
-    <div className=" dark:bg-slate-800 dark:border-solid dark:border-2 dark:border-amber-400 border-solid border-2 border-sky-500 bg-gray-100 rounded flex items-center justify-center ">
+    <div
+      className=" dark:bg-slate-800 dark:border-solid dark:border-2
+     dark:border-amber-400 border-solid border-2 border-sky-500 bg-gray-100
+      rounded flex items-center justify-center "
+    >
       {options?.map(option => (
         <button
           key={option.text}

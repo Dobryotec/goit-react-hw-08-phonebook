@@ -9,7 +9,7 @@ const ContactsPage = () => {
         Phonebook
       </h1>
       <ContactForm />
-      <div>
+      <div className="pb-10">
         <h2 className="text-center font-bold text-4xl text-amber-400 mt-8">
           Contacts
         </h2>

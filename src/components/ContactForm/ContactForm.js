@@ -17,7 +17,6 @@ export default function ContactForm() {
       name,
       number,
     };
-    console.log(newContact);
     if (contacts.find(contact => contact.name === newContact.name)) {
       alert(`${newContact.name} is already in contacts`);
     } else {
@@ -48,11 +47,14 @@ export default function ContactForm() {
           Name
         </label>
         <input
-          className="w-full font-bold  invalid:text-pink-600 focus:border-sky-500 px-4 py-1.5 shadow-xl focus:outline-none focus:ring-2 focus:ring-sky-500  border-solid border-4 border-amber-400 rounded dark:text-stone-500 "
+          className="w-full font-bold  invalid:text-pink-600 focus:border-sky-500 px-4 py-1.5 
+          shadow-xl focus:outline-none focus:ring-2 focus:ring-sky-500  border-solid border-4
+           border-amber-400  rounded dark:text-stone-500 "
           type="text"
           name="name"
           pattern="^[a-zA-Zа-яА-Я]+(([' -][a-zA-Zа-яА-Я ])?[a-zA-Zа-яА-Я]*)*$"
-          title="Name may contain only letters, apostrophe, dash and spaces. For example Adrian, Jacob Mercer, Charles de Batz de Castelmore d'Artagnan"
+          title="Name may contain only letters, apostrophe, dash and spaces. 
+          For example Adrian, Jacob Mercer, Charles de Batz de Castelmore d'Artagnan"
           required
           id={nameInputId}
           onChange={handleChange}
@@ -67,7 +69,9 @@ export default function ContactForm() {
           Number
         </label>
         <input
-          className="w-full font-bold px-4 py-1.5 shadow-xl  border-solid border-4 border-amber-400 rounded focus:outline-none focus:border-sky-500  focus:ring-2 focus:ring-sky-500 dark:text-stone-500"
+          className="w-full font-bold px-4 py-1.5 shadow-xl  border-solid border-4 border-amber-400 
+          rounded focus:outline-none focus:border-sky-500  focus:ring-2 focus:ring-sky-500
+           dark:text-stone-500"
           type="tel"
           name="number"
           pattern="\+?\d{1,4}?[-.\s]?\(?\d{1,3}?\)?[-.\s]?\d{1,4}[-.\s]?\d{1,4}[-.\s]?\d{1,9}"
@@ -79,7 +83,9 @@ export default function ContactForm() {
         />
       </div>
       <button
-        className="bg-gradient-to-r from-slate-400 to-amber-400 py-1 px-3 text-white rounded-full hover:bg-gradient-to-l hover:from-black hover:to-amber-400 animate-pulse transition ease-in-out hover:duration-500 font-bold shadow-2xl"
+        className="bg-gradient-to-r from-slate-400 to-amber-400 py-1 px-3 text-white rounded-full 
+        hover:bg-gradient-to-l hover:from-black hover:to-amber-400 animate-pulse 
+        transition ease-in-out hover:duration-500 font-bold shadow-2xl"
         type="submit"
       >
         Add contact
