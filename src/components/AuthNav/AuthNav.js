@@ -1,17 +1,25 @@
 import { NavLink } from 'react-router-dom';
-import css from './AuthNav.module.css';
 
 const AuthNav = () => {
   return (
-    <div>
+    <div className="flex flex-col ">
       <NavLink
-        className={({ isActive }) => (isActive ? css.active : css.link)}
+        className={({ isActive }) =>
+          isActive
+            ? 'dark:text-amber-400 text-amber-400 inline-block p-2.5 font-bold text-2xl'
+            : 'dark:text-stone-300 inline-block p-2.5 font-bold text-xl hover:text-sky-500 dark:hover:text-sky-500 transition duration-500 ease-in-out'
+        }
         to="/register"
       >
         Register
       </NavLink>
+
       <NavLink
-        className={({ isActive }) => (isActive ? css.active : css.link)}
+        className={({ isActive }) =>
+          isActive
+            ? 'dark:text-amber-400 text-amber-400 inline-block p-2.5 font-bold text-2xl'
+            : 'dark:text-stone-300 inline-block p-2.5 font-bold text-xl hover:text-sky-500 dark:hover:text-sky-500 transition duration-500 ease-in-out'
+        }
         to="/login"
       >
         Log In

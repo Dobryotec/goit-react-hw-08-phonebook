@@ -1,4 +1,3 @@
-import css from './ContactList.module.css';
 import { useDispatch, useSelector } from 'react-redux';
 import { useEffect } from 'react';
 import { fetchAllContacts, delContact } from '../../redux/contacts/thunks';
@@ -30,10 +29,10 @@ const ContactList = () => {
 
   const renderContacts = (id, name, phone, index) => {
     return (
-      <li className={css.item} key={id}>
+      <li key={id}>
         {index + 1}. {name}: {phone}
         <button
-          className={css.btn}
+          className="ml-10 mt-6 bg-gradient-to-r from-slate-400 to-amber-400 py-1 px-3 text-white rounded-full hover:bg-gradient-to-l hover:from-black hover:to-amber-400 animate-pulse transition ease-in-out hover:duration-500 font-bold shadow-2xl"
           onClick={() => dispatch(delContact(id))}
           disabled={isLoading}
         >
@@ -44,8 +43,8 @@ const ContactList = () => {
   };
 
   return (
-    <ul className={css.list}>
-      {isLoading && <ClipLoader color="blue" />}
+    <ul className="container  w-[280px] mx-auto py-12 font-bold dark:text-amber-400">
+      {isLoading && <ClipLoader color="gold" />}
       {error && <div>{error}</div>}
       {filtredContacts().map(({ id, name, phone }, index) => {
         return renderContacts(id, name, phone, index);

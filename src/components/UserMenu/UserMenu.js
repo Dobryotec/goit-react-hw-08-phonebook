@@ -1,5 +1,4 @@
 import { useDispatch, useSelector } from 'react-redux';
-import css from './UserMenu.module.css';
 import { selectName } from 'redux/auth/selectors';
 import { logOut } from 'redux/auth/thunks';
 
@@ -9,9 +8,15 @@ const UserMenu = () => {
   const dispatch = useDispatch();
 
   return (
-    <div className={css.wrapper}>
-      <p className={css.username}>Welcome, {name}</p>
-      <button type="button" onClick={() => dispatch(logOut())}>
+    <div>
+      <p className="font-bold text-xl pr-2 text-amber-400 animate-pulse mb-3">
+        Welcome, {name}
+      </p>
+      <button
+        className="bg-gradient-to-r from-slate-400 to-amber-400 py-1 px-3 text-white rounded-full hover:bg-gradient-to-l hover:from-black hover:to-amber-400 animate-pulse transition ease-in-out hover:duration-500 font-bold"
+        type="button"
+        onClick={() => dispatch(logOut())}
+      >
         Logout
       </button>
     </div>
