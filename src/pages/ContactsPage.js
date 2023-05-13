@@ -5,7 +5,7 @@ import ContactList from '../components/ContactList/ContactList';
 const ContactsPage = () => {
   return (
     <div className="container mx-auto px-2.5 text-xl dark:bg-neutral-800 rounded-b-lg shadow-2xl">
-      <h1 className="py-[70px] text-[64px] font-bold mx-auto  text-amber-400 max-w-[370px] animate-bounce ">
+      <h1 className="py-[70px] text-[64px] font-bold mx-auto text-center  text-amber-400  animate-bounce ">
         Phonebook
       </h1>
       <ContactForm />
